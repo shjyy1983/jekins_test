@@ -12,7 +12,7 @@ pipeline {
 		    	sh """
 		    		./hello
 		    	"""
-		    	build job: 'job1_1', parameters: []
+		    	build job: 'job1_pipeline', parameters: []
             }
         }
     }
