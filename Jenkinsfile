@@ -1,3 +1,10 @@
 node {
-    echo "Hello World 123!"
+    echo "start"
+    checkout scm
+
+    stage("run") {
+    	echo "run"
+    }
+
+    echo "end"
 }
