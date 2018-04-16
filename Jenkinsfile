@@ -8,10 +8,11 @@ pipeline {
         }
         stage('Run') { 
             steps {
-            sh "chmod 777 ./hello"
-	    	sh """
-	    		./hello
-	    	"""
+	            sh "chmod 777 ./hello"
+		    	sh """
+		    		./hello
+		    	"""
+		    	build job: 'job1_1', parameters: []
             }
         }
     }
