@@ -4,7 +4,7 @@ node {
 
     stage("run") {
     	echo "run"
-    	sh "chmod 777 ./hello ""
+    	sh "chmod 777 ./hello"
 		sh "./hello"
     }
 
