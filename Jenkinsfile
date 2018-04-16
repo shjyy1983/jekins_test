@@ -1,17 +1,13 @@
 pipeline {
     agent any 
     stages {
-        stage('Checkout') { 
+        stage('job1_pipeline') { 
             steps {
-                checkout scm
+		    	build job: 'job1_pipeline', parameters: []
             }
         }
-        stage('Run') { 
-            steps {
-	            sh "chmod 777 ./hello"
-		    	sh """
-		    		./hello
-		    	"""
+        stage('job2_pipeline') { 
+            steps { 
 		    	build job: 'job2_pipeline', parameters: []
             }
         }
