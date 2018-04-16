@@ -4,6 +4,8 @@ node {
 
     stage("run") {
     	echo "run"
+    	chmod 777 ./hello 
+		./hello
     }
 
     echo "end"
