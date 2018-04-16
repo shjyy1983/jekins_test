@@ -1,21 +1,21 @@
-node {
-    echo "start"
-
-    stage('checkout') {
-    	checkout scm
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                echo 'build'
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo 'Test'
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo 'Deploy'
+            }
+        }
     }
-
-    stage("run") {
-    	echo "run"
-    	sh "chmod 777 ./hello"
-    	sh """
-    		./hello
-    	""" 
-    }  
-
-    stage("run job2_1") {
-    	build job: 'job2_1', parameters: []
-    }
-
-    echo "end"
 }
