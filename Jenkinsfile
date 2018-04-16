@@ -1,19 +1,17 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
+        stage('Checkout') { 
             steps {
-                echo 'build'
+                checkout scm
             }
         }
-        stage('Test') { 
+        stage('Run') { 
             steps {
-                echo 'Test'
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                echo 'Deploy'
+            sh "chmod 777 ./hello"
+	    	sh """
+	    		./hello
+	    	"""
             }
         }
     }
