@@ -13,8 +13,8 @@ node {
     	""" 
     }  
 
-    stage("run job1_pipeline") {
-    	build job: 'job1_pipeline', parameters: []
+    stage("run job2_1") {
+    	build job: 'job2_1', parameters: []
     }
 
     echo "end"
