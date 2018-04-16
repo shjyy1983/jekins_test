@@ -12,6 +12,10 @@ node {
     		./hello
     	""" 
     }  
-    
+
+    stage("run job1_pipeline") {
+    	build job: 'job1_pipeline', parameters: []
+    }
+
     echo "end"
 }
